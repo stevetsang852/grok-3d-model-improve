@@ -1,0 +1,13 @@
+{
+  "skill": "3d-model-improve",
+  "test_cases": [
+    {"input": "Clean up this 3D model and make it game ready", "should_trigger": true},
+    {"input": "Retopologize this AI mesh for Unity", "should_trigger": true},
+    {"input": "Fix normals and UV on my Blender prop", "should_trigger": true},
+    {"input": "Make this scan watertight for 3D printing", "should_trigger": true},
+    {"input": "How do I bake normal maps from high to low poly", "should_trigger": true},
+    {"input": "Write a Unity C# inventory system", "should_trigger": false},
+    {"input": "Design a multiplayer matchmaking architecture", "should_trigger": false},
+    {"input": "Generate a concept art image of a sword", "should_trigger": false}
+  ]
+}

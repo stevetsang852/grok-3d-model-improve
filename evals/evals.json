@@ -1,0 +1,45 @@
+{
+  "skill": "3d-model-improve",
+  "test_cases": [
+    {
+      "name": "ai_generated_prop_cleanup",
+      "input": "This Meshy GLB looks messy. Clean it up and make it game-ready for Unity.",
+      "assertions": [
+        "Inspects poly count and reports before/after",
+        "Runs cleanup (doubles, loose, normals)",
+        "Suggests QuadriFlow or Instant Meshes for static prop",
+        "Exports FBX or GLB with meters scale"
+      ]
+    },
+    {
+      "name": "character_retopo_advice",
+      "input": "I have a high-poly character sculpt. How do I make it animation-ready for Unreal?",
+      "assertions": [
+        "Recommends quad-dominant topology with edge flow",
+        "Prefers assisted retopo over pure automatic for deformable",
+        "Mentions UV seams aligned with hard edges",
+        "Notes Unreal FBX import scale considerations"
+      ]
+    },
+    {
+      "name": "print_watertight_check",
+      "input": "Check if this STL is printable and fix the holes.",
+      "assertions": [
+        "Checks watertight and winding consistency",
+        "Reports non-manifold edges",
+        "Does not force UV or game poly budget",
+        "Recommends MeshLab or Blender repair"
+      ]
+    },
+    {
+      "name": "budget_and_export",
+      "input": "Optimize this prop to under 10k tris for mobile Godot.",
+      "assertions": [
+        "Applies decimation or remesh toward budget",
+        "Uses glTF/GLB for Godot",
+        "States scale and poly count",
+        "Suggests texture size appropriate for mobile"
+      ]
+    }
+  ]
+}
