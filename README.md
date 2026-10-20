@@ -1,26 +1,23 @@
 # Grok 3D Model Improve Skill
 
-A Grok skill for turning raw, AI-generated, or scanned 3D meshes into game-ready assets.
+Turn raw, AI-generated, or scanned 3D meshes into clean, engine-ready game assets.
 
 ## What it does
 
-- Inspect meshes (poly count, watertight, scale, normals)
-- Clean topology and fix normals
-- Remesh / retopo guidance for props vs characters
-- UV, bake, and PBR material notes
+- Inspect poly count, watertight status, scale, normals
+- Clean doubles, loose geometry, and normal direction
+- Guide remesh / retopo (props vs characters)
+- Basic UV, hard edges, and PBR notes
 - Export profiles for Unity, Unreal Engine, and Godot
+- Poly budget and engine import checklists
 
-## Structure
+## Quick Start
 
-- `SKILL.md` — Main skill instructions
-- `scripts/` — Blender headless scripts and mesh inspector
-- `references/` — Tool list, poly budgets, engine import checklists
-- `evals/` — Trigger and behavior tests
+Place this folder in your Grok skills directory, then ask:
 
-## Quick start
-
-1. Place this folder in your Grok skills directory.
-2. Ask Grok to clean or prepare a 3D model for your engine.
+- "Clean this GLB and make it game-ready for Unity"
+- "Check if this STL is watertight for printing"
+- "Optimize this prop under 10k tris for mobile Godot"
 
 ## Scripts
 
@@ -28,10 +25,25 @@ A Grok skill for turning raw, AI-generated, or scanned 3D meshes into game-ready
 # Inspect (requires trimesh)
 python3 scripts/mesh_inspect.py model.glb
 
-# Game-ready prep (requires Blender)
+# Basic cleanup (requires Blender)
+blender --background --python scripts/blender_cleanup.py -- input.glb output.glb
+
+# Game-ready prep with Smart UV + dual export (requires Blender)
 blender --background --python scripts/blender_game_prep.py -- input.glb output_base 8000
 ```
 
+## Structure
+
+- `SKILL.md` — Core workflow and rules
+- `scripts/` — Inspect and Blender headless tools
+- `references/` — Tools, budgets, engine import, LOD & collision notes
+- `evals/` — Trigger and behavior tests
+
+## Requirements
+
+- Python 3 + trimesh (for inspect)
+- Blender 4.x+ (for cleanup and game prep scripts)
+
 ## License
 
-Use freely for game development. Scripts are provided as-is.
+MIT. See LICENSE.
