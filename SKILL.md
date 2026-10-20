@@ -45,7 +45,7 @@ Turn raw, AI-generated, or scanned meshes into clean, engine-ready assets. Focus
 | AI generate base      | Hunyuan3D-2.1, TRELLIS.2, Stable Fast 3D (local weights) | Meshy, Tripo, Rodin     |
 | UV / bake             | Blender                                 | Substance Painter, Marmoset  |
 
-See `references/tools.md` for repo links and usage notes. See `references/game_budgets.md` for poly and texture guidelines. See `references/engine_import.md` for engine checklists. See `references/lod_collision.md` for LOD and collision notes.
+See `references/tools.md` for repo links and usage notes. See `references/game_budgets.md` for poly and texture guidelines. See `references/engine_import.md` for engine checklists. See `references/lod_collision.md` for LOD and collision notes. See `references/lightmap_batch.md` for lightmap UV and batch processing.
 
 ## Scripts
 
